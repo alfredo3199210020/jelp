@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EL ARTISTA</h1>
+        <p>ANIMADOR - ILUSTRADOR - MAS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about me.html">About me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="slider">
+            <div class="slider">
+                <div class="slide">
+                    <img src="imagen1.png" alt="Fotografía de un río subterráneo">
+                </div>
+                <div class="slide">
+                    <img src="imagen2.png" alt="Mock-up de una etiqueta de chocolate solei">
+                </div>
+                <div class="slide">
+                    <img src="imagen3.png" alt="Render de lata de bebida energética llamada burn out">
+                </div>
+                <div class="slide">
+                    <img src="imagen4.png" alt="ilustración de esqueletos">
+                </div>
+                  <div class="slide">
+                    <img src="imagen5.png" alt="Mock-up de una etiqueta de chocolate solei">
+                </div>
+                  <div class="slide">
+                    <img src="imagen6.png" alt="Mock-up de una etiqueta de chocolate solei">
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </section>
+
+        <section>
+            <h2 class="titulos">Acerca de mí</h2>
+            <p class="titulos">
+                Soy un Ilustrador principalmente enfocado en el estilo tradicional japones del manga, domino la ilustracion tradional 2d con tinta y la ilitracion digital, 
+                realizo numerosas animaciones en diferentes estilos.
+
+            
+            </p>
+            <p class="titulos">
+            Como ilustrador principalmente enfocado en el estilo tradicional japonés del manga, mi proceso creativo es una mezcla de tradición y modernidad. Comienzo cada proyecto con bocetos a mano alzada, utilizando tinta negra para capturar la esencia y las emociones de los personajes y las escenas. Para mí, la tinta es un medio que exige precisión y confianza; no hay espacio para errores, lo que me obliga a estar completamente presente en cada trazo.
+
+            </p>
+
+                 </p>
+            <p class="titulos">
+</p>
+ La influencia del manga clásico japonés es omnipresente en mi trabajo. Crecí admirando a maestros como Osamu Tezuka y Hayao Miyazaki, quienes no solo me inspiraron con sus historias, sino con la manera en que lograban transmitir emociones profundas a través de líneas aparentemente simples. Este respeto por la tradición se refleja en mi insistencia en comenzar con técnicas tradicionales antes de moverme a lo digital.
+
+     </p>
+            <p class="titulos">
+</p>
+Cuando paso a la ilustración digital, es como si respirara una nueva vida en mis creaciones. Aquí es donde exploro diferentes estilos y técnicas, fusionando la estética clásica del manga con elementos modernos y a veces experimentales. La libertad que ofrece el medio digital me permite jugar con colores, texturas y efectos que no serían posibles en papel, ampliando así las posibilidades de lo que puedo crear.
+
+     </p>
+            <p class="titulos">
+                
+                Mis animaciones son una extensión natural de este proceso. Me gusta pensar en ellas como manga en movimiento. Cada fotograma es tratado como una ilustración por derecho propio, asegurándome de que la fluidez del movimiento no sacrifique la atención al detalle que es tan esencial para el estilo manga. La inspiración para estas animaciones a menudo proviene de la vida cotidiana, de la naturaleza y de las emociones humanas más básicas, que intento capturar y exagerar de manera que resuenen profundamente con la audiencia.
+
+</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; </p>
+    </footer>
+
+    <!-- Script para el slider -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
